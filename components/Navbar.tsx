@@ -7,6 +7,36 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState(""); // State to track active section
 
+  console.log(activeSection);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "0% 0% -80% 0%" },
+    );
+
+    siteRoutes.forEach((item) => {
+      const section = document.getElementById(item.route);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      siteRoutes.forEach((item) => {
+        const section = document.getElementById(item.route);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
   const scrollToSection = ({ id }: { id: string }) => {
     const elements = document.getElementById(id);
     elements!.scrollIntoView({ behavior: "smooth" });
@@ -16,7 +46,7 @@ const Navbar = () => {
     <div className="sticky top-0 flex w-full items-center justify-between bg-white p-4 px-4 backdrop-saturate-150">
       <div
         className="flex flex-1 cursor-pointer items-center"
-        onClick={() => scrollToSection({ id: "main" })}
+        onClick={() => scrollToSection({ id: siteRoutes[0].route })}
       >
         <Image
           className="rounded-full"
@@ -25,14 +55,14 @@ const Navbar = () => {
           width={36}
           height={36}
         />
-        <h1 className="ml-2 text-xl font-bold">휴스케일</h1>
+        <h1 className="ml-2 text-xl font-bold">{siteRoutes[0].label}</h1>
       </div>
 
       <nav className="flex gap-4">
-        {siteRoutes.map((item) => (
+        {siteRoutes.slice(1).map((item) => (
           <div
             key={item.route}
-            className={`cursor-pointer font-bold transition-colors hover:text-primary`}
+            className={`cursor-pointer font-bold transition-colors hover:text-primary ${activeSection === item.route ? "text-primary" : undefined}`}
             onClick={() => scrollToSection({ id: item.route })}
           >
             {item.label}
