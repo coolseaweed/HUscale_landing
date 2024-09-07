@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,13 +1,15 @@
 import React from "react";
+import { Careers } from "@/config/careers";
+import CareerCard from "./cards/CareerCard";
 
 const CareerSection = () => {
   return (
-    <section id="career">
-      <div className="flex min-h-screen w-full items-center justify-center bg-purple-500">
-        <h1 className="flex items-center justify-center text-2xl font-bold text-white">
-          Career Section
-        </h1>
-      </div>
+    <section id="career" className="flex w-full flex-col px-4 py-20">
+      <h1 className="flex pb-8 text-4xl font-bold">대표이력</h1>
+
+      {Careers.map((career) => (
+        <CareerCard key={career.company} career={career} />
+      ))}
     </section>
   );
 };

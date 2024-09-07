@@ -1,12 +1,27 @@
 import React from "react";
-
+import { Partners } from "@/config/partners";
+import Image from "next/image";
 const PartnerSection = () => {
   return (
-    <section id="partners">
-      <div className="flex min-h-screen w-full items-center justify-center bg-blue-500">
-        <h1 className="flex items-center justify-center text-2xl font-bold text-white">
-          Partners
-        </h1>
+    <section id="partners" className="flex w-full items-center p-4 py-20">
+      <div className="flex w-full flex-col">
+        <h1 className="flex text-4xl font-bold">파트너사</h1>
+        <div className="flex w-full flex-row justify-center gap-16">
+          {Partners.map((item) => (
+            <div
+              key={item.company}
+              className="flex min-h-[128px] flex-col items-center justify-end"
+            >
+              <Image
+                src={item.image.src}
+                alt={item.company}
+                width={item.image.width}
+                height={item.image.height}
+              />
+              <h1 className="pt-4 font-bold">{item.company}</h1>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState(""); // State to track active section
 
-  console.log(activeSection);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,12 +44,12 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 flex w-full items-center justify-between bg-white p-4 px-4 backdrop-saturate-150">
       <div
-        className="flex flex-1 cursor-pointer items-center"
+        className="flex w-fit cursor-pointer items-center"
         onClick={() => scrollToSection({ id: siteRoutes[0].route })}
       >
         <Image
           className="rounded-full"
-          src="/logo.png"
+          src="/shared/logo.png"
           alt="huscale logo"
           width={36}
           height={36}
@@ -69,8 +68,6 @@ const Navbar = () => {
           </div>
         ))}
       </nav>
-
-      <div></div>
     </div>
   );
 };
