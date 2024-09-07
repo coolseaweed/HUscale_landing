@@ -1,16 +1,18 @@
-import Members from "@/components/Members";
-import Portfolio from "@/components/Portfolio";
-import Partners from "@/components/Partners";
-import Main from "@/components/Main";
-import Contact from "@/components/Contact";
+import MemberSection from "@/components/MemberSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import PartnerSection from "@/components/PartnerSection";
+import MainSection from "@/components/MainSection";
+import ContactSection from "@/components/ContactSection";
+import CareerSection from "@/components/CareerSection";
 export default function Home() {
   return (
     <>
-      <Main />
-      <Portfolio />
-      <Partners />
-      <Members />
-      <Contact />
+      <MainSection />
+      <CareerSection />
+      <PortfolioSection />
+      <PartnerSection />
+      <MemberSection />
+      <ContactSection />
     </>
   );
 }

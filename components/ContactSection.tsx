@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <section id="contact">
       <div className="flex min-h-screen w-full items-center justify-center bg-gray-500">
@@ -12,4 +12,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

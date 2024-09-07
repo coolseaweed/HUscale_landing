@@ -1,6 +1,6 @@
 import React from "react";
 
-const Portfolio = () => {
+const PortfolioSection = () => {
   return (
     <section id="portfolio">
       <div className="flex min-h-screen w-full items-center justify-center bg-green-500">
@@ -12,4 +12,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioSection;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Main = () => {
+const MainSection = () => {
   return (
     <section id="main">
       <div className="flex min-h-screen w-full items-center justify-center bg-red-500">
@@ -12,4 +12,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainSection;

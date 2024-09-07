@@ -25,8 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clsx(
-          "font-sans antialiased min-h-screen",
-          fontSans.variable
+          "mx-auto min-h-screen max-w-[1280px] font-sans antialiased",
+          fontSans.variable,
         )}
       >
         <Navbar />

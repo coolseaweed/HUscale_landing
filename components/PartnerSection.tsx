@@ -1,6 +1,6 @@
 import React from "react";
 
-const Partners = () => {
+const PartnerSection = () => {
   return (
     <section id="partners">
       <div className="flex min-h-screen w-full items-center justify-center bg-blue-500">
@@ -12,4 +12,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default PartnerSection;

@@ -7,8 +7,9 @@ export const siteConfig = {
 
 export const siteRoutes = [
   { label: "휴스케일", route: "main" },
+  { label: "대표이력", route: "career" },
   { label: "포트폴리오", route: "portfolio" },
   { label: "파트너사", route: "partners" },
   { label: "구성원", route: "members" },
-  { label: "연락처", route: "contact" },
+  { label: "문의", route: "contact" },
 ];
