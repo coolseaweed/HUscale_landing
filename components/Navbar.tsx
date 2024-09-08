@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { siteRoutes } from "@/config/site";
+import { siteRoutes } from "@/config/navbar";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
           }
         });
       },
-      { rootMargin: "0% 0% -80% 0%" },
+      { rootMargin: "0% 0% -40% 0%" },
     );
 
     siteRoutes.forEach((item) => {

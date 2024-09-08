@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import clsx from "clsx";
 import { fontSans } from "@/config/fonts";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/navbar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

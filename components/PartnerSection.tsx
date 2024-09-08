@@ -3,10 +3,10 @@ import { Partners } from "@/config/partners";
 import Image from "next/image";
 const PartnerSection = () => {
   return (
-    <section id="partners" className="flex w-full items-center p-4 py-20">
+    <section id="partners" className="flex min-h-screen w-full p-4 py-20">
       <div className="flex w-full flex-col">
         <h1 className="flex text-4xl font-bold">파트너사</h1>
-        <div className="flex w-full flex-row justify-center gap-16">
+        <div className="flex-warp flex w-full justify-center gap-16">
           {Partners.map((item) => (
             <div
               key={item.company}
