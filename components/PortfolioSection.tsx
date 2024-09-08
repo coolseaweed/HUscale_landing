@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="flex min-h-screen w-full flex-col py-20">
+    <section id="portfolio" className="flex w-full flex-col pt-20">
       <h1 className="flex p-4 text-4xl font-bold">포트폴리오</h1>
       <div className="">
         <Swiper

@@ -36,7 +36,7 @@ const MemberCard = ({ member }: { member: Member }) => {
 
       <div className="flex flex-col">
         {member.career.map((career) => (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2" key={career}>
             <strong>•</strong>
             <h1 className="text-lg font-bold">{career}</h1>
           </div>
